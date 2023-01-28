@@ -53,7 +53,7 @@ IPATH+=../../..
 # The default rule, which causes the Project Zero Example to be built.
 #
 all: ${COMPILER}
-all: ${COMPILER}/main.axf
+all: ${COMPILER}/practica8.axf
 
 #
 # The rule to build project with debug support.
@@ -61,7 +61,7 @@ all: ${COMPILER}/main.axf
 
 debug: CFLAGS+=-g -D DEBUG
 debug: ${COMPILER}
-debug: ${COMPILER}/main.axf
+debug: ${COMPILER}/practica8.axf
 
 #
 # The rule to clean out all the build products.
@@ -78,18 +78,18 @@ ${COMPILER}:
 #
 # Rules for building the Project Zero Example.
 #
-${COMPILER}/main.axf: ${COMPILER}/main.o
-${COMPILER}/main.axf: ${COMPILER}/startup_${COMPILER}.o
-${COMPILER}/main.axf: ${COMPILER}/GPIO.o
-${COMPILER}/main.axf: ${COMPILER}/PLL.o
-${COMPILER}/main.axf: ${COMPILER}/UART.o
-${COMPILER}/main.axf: ${COMPILER}/ADC.o
-${COMPILER}/main.axf: ${COMPILER}/PWM.o
-${COMPILER}/main.axf: ${COMPILER}/TIMER.o
-${COMPILER}/main.axf: ${COMPILER}/SSI.o
-${COMPILER}/main.axf: ${COMPILER}/SYSTICK.o
-${COMPILER}/main.axf: main.ld
-SCATTERgcc_main=main.ld
+${COMPILER}/practica8.axf: ${COMPILER}/practica8.o
+${COMPILER}/practica8.axf: ${COMPILER}/startup_${COMPILER}.o
+${COMPILER}/practica8.axf: ${COMPILER}/GPIO.o
+${COMPILER}/practica8.axf: ${COMPILER}/PLL.o
+${COMPILER}/practica8.axf: ${COMPILER}/UART.o
+${COMPILER}/practica8.axf: ${COMPILER}/ADC.o
+${COMPILER}/practica8.axf: ${COMPILER}/PWM.o
+${COMPILER}/practica8.axf: ${COMPILER}/TIMER.o
+${COMPILER}/practica8.axf: ${COMPILER}/SSI.o
+${COMPILER}/practica8.axf: ${COMPILER}/SYSTICK.o
+${COMPILER}/practica8.axf: practica8.ld
+SCATTERgcc_main=practica8.ld
 ENTRY_main=ResetISR
 CFLAGSgcc=-DTARGET_IS_TM4C123_RB1
 
